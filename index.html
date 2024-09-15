@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carton Aleatorio Act Bonus</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            max-width: 80%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="randomImage" alt="Imagen aleatoria">
+
+    <script>
+        // URLs de las imágenes que subiste a GitHub
+        const imagenes = [
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/01.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/02.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/03.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/04.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/05.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/06.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/07.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/08.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/09.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/10.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/11.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/12.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/13.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/14.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/15.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/16.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/17.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/18.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/19.jpg',
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/20.jpg'
+            'https://github.com/StoryChara/Banderas_Hispanas/raw/main/banderas/21.jpg'
+        ];
+
+        // Selecciona una imagen aleatoria
+        function mostrarImagenAleatoria() {
+            const indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+            const imagenAleatoria = imagenes[indiceAleatorio];
+            document.getElementById('randomImage').src = imagenAleatoria;
+        }
+
+        // Llama a la función cuando se cargue la página
+        window.onload = mostrarImagenAleatoria;
+    </script>
+
+</body>
+</html>
